@@ -1,5 +1,4 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import { Text, View, StyleSheet } from 'react-native';
 
 class App extends React.Component {
