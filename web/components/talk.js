@@ -15,7 +15,7 @@ class Talk extends React.Component {
 				</Time>
 
 				<Avatar>
-					<StyledImage src={ talk.avatar } />
+					<StyledImage src={ talk.avatar } className="avatar"/>
 				</Avatar>
 
 				<Info>
@@ -39,6 +39,18 @@ const Container = styled.div`
  width: 100%; 
  borderTop: 3px solid #393939; 
  padding: 30px 0;
+ transition: all 0.5s ease-out;
+  	
+ &:hover {
+ 	padding: 40px 0;
+ 	transition: all 0.5s ease-out;
+ 	
+ 	.avatar {
+ 		height: 170px;
+		width: 130px;
+		transition: all 0.5s ease-out;
+ 	}
+ }
 `;
 
 const Time = styled.div`
@@ -52,7 +64,6 @@ const Time = styled.div`
 `;
 
 const Avatar = styled.div`
-	with: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -61,6 +72,7 @@ const Avatar = styled.div`
 const StyledImage = styled.img`
 	height: 150px;
 	width: 110px;
+	transition: all 0.5s ease-out;
 `;
 
 const Info = styled.div`

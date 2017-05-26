@@ -25,7 +25,7 @@ class Talks extends React.Component {
 }
 
 const Container = styled.div`
-	overflow: auto; 
+	overflow: auto;
 	display: flex;
 	flexDirection: column;
 `;
