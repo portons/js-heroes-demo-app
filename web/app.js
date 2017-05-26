@@ -1,6 +1,3 @@
-import 'normalize.css/normalize.css';
-import 'core/assets/stylesheets/main.scss';
-
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Route, Router, Link, browserHistory } from 'react-router';
