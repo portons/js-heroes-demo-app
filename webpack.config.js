@@ -3,6 +3,7 @@ const path              = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanPlugin       = require('clean-webpack-plugin');
 const autoprefixer      = require('autoprefixer');
+const _                 = require('lodash');
 
 const packageConfig     = require('./package.json');
 const appEnv            = process.env.NODE_ENV || 'development';
@@ -10,6 +11,11 @@ const appPath           = path.join(__dirname);
 const testPath          = path.join(__dirname, 'test');
 const distPath          = path.join(__dirname, 'dist');
 const exclude           = /node_modules/;
+const packageExclude    = ['react-native', 'mimic'];
+
+const vendorPackages = _.filter(Object.keys(packageConfig.dependencies), function (dep) {
+	return !_.includes(packageExclude, dep);
+});
 
 const config = {
 
@@ -18,7 +24,7 @@ const config = {
 
   entry: {
     app: 'web/app.js',
-    vendor: Object.keys(packageConfig.dependencies)
+    vendor: vendorPackages
   },
 
   output: {
