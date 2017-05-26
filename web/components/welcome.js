@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Welcome = ({ fetchTalks }) => (
-	<div>
+	<div style={{ position: 'absolute', top: '40vh' }}>
 		<Title>
 			HELLO JS HEROES!
 		</Title>

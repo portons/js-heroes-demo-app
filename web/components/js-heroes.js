@@ -7,6 +7,7 @@ import { fetchTalks } from 'core/actions/talks';
 import { talksSelector } from 'core/selectors/talks';
 
 import Welcome from 'web/components/welcome';
+import Talks from 'web/components/talks';
 
 class JsHeroes extends React.Component {
 	render() {
@@ -14,18 +15,17 @@ class JsHeroes extends React.Component {
 			<Container>
 				{
 					this.props.talks
-						? <div>Talks</div>
-						: <Welcome fetchTalks={ this.props.fetchTalks }/>
+						? <Talks talks={ this.props.talks }/>
+						: <Welcome fetchTalks={ this.props.fetchTalks } />
 				}
 			</Container>
-		)
+		);
 	}
 }
 
 const Container = styled.div`
 	font-family: Roboto, sans-serif;
 	display: flex;
-	height: 100vh;
 	width: 100%;
 	justify-content: center;
 	align-items: center;
