@@ -1,1 +1,1 @@
-export const API_URL = 'https://s3.amazonaws.com/500tech-shared/';
+export const API_URL = 'https://s3.amazonaws.com/500tech-shared';

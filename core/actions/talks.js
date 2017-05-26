@@ -2,7 +2,7 @@ import { API_URL } from 'core/constants/config';
 import { SET_TALKS } from 'core/constants/action-types';
 
 export const fetchTalks = () => (dispatch) => {
-	fetch(API_URL).then(response => {
+	fetch(`${API_URL}/talks.json`).then(response => {
 		response.json().then(data => dispatch(setTalks(data)));
 	});
 };
