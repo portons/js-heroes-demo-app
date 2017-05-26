@@ -3,20 +3,32 @@ import styled from 'styled-components';
 
 import Talk from 'web/components/talk';
 
-const Talks = ({ talks }) => (
-	<div style={{ overflow: 'auto', display: 'flex', flexDirection: 'column' }}>
-		<Title>
-			TODAY'S TALKS
-		</Title>
+class Talks extends React.Component {
+	render() {
+		const { talks } = this.props;
 
-		{
-			talks.days[0].events.map((talk, index) => (
-				<Talk key={ index }
-							talk={ talk }/>
-			))
-		}
-	</div>
-);
+		return (
+			<Container>
+				<Title>
+					TODAY'S TALKS
+				</Title>
+
+				{
+					talks.days[0].events.map((talk, index) => (
+						<Talk key={ index }
+									talk={ talk }/>
+					))
+				}
+			</Container>
+		);
+	}
+}
+
+const Container = styled.div`
+	overflow: auto; 
+	display: flex;
+	flexDirection: column;
+`;
 
 const Title = styled.div`
 	font-size: 50px;

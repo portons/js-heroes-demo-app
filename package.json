@@ -21,7 +21,7 @@
     "redux-actions": "^2.0.3",
     "redux-thunk": "2.0.1",
     "reselect": "^3.0.1",
-    "styled-components": "^2.0.0",
+    "styled-components": "1.4.6",
     "superagent": "1.7.2"
   },
   "devDependencies": {

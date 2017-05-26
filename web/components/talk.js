@@ -4,30 +4,42 @@ import styled from 'styled-components';
 
 import { selectTalk } from 'core/actions/talks';
 
-const Talk = ({ talk, selectTalk }) => (
-	<div style={{ display: 'flex', width: '100%', borderTop: '3px solid #393939', padding: '30px 0' }}
-			 onClick={ () => selectTalk(talk) }>
-		<Time>
-			{ talk.time }
-		</Time>
+class Talk extends React.Component {
+	render() {
+		const { talk, selectTalk } = this.props;
 
-		<Avatar>
-			<StyledImage src={ talk.avatar } />
-		</Avatar>
+		return (
+			<Container onClick={ () => selectTalk(talk) }>
+				<Time>
+					{ talk.time }
+				</Time>
 
-		<Info>
-			{
-				talk.name &&
-				<Name>{ talk.name }</Name>
-			}
+				<Avatar>
+					<StyledImage src={ talk.avatar } />
+				</Avatar>
 
-			{
-				talk.title &&
-				<Title>{ talk.title }</Title>
-			}
-		</Info>
-	</div>
-);
+				<Info>
+					{
+						talk.name &&
+						<Name>{ talk.name }</Name>
+					}
+
+					{
+						talk.title &&
+						<Title>{ talk.title }</Title>
+					}
+				</Info>
+			</Container>
+		);
+	}
+}
+
+const Container = styled.div`
+ display: flex; 
+ width: 100%; 
+ borderTop: 3px solid #393939; 
+ padding: 30px 0;
+`;
 
 const Time = styled.div`
 	color: #fff;
