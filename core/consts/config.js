@@ -1,1 +1,0 @@
-export const RECIPES_URL = 'https://s3.amazonaws.com/500tech-shared/recipes.json';

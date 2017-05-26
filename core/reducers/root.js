@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
-import recipesReducer from './recipes';
+
+import talksReducer from 'core/reducers/talks';
 
 export default combineReducers({
-  recipes: recipesReducer
+	talks: talksReducer
 });
