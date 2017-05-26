@@ -1,1 +1,1 @@
-export const talksSelector = (state) => state.talks;
+export const talksSelector = (state) => state.talks.talks;

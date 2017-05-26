@@ -1,8 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 
-const Talk = ({ talk }) => (
-	<div style={{ display: 'flex', width: '100%', borderTop: '3px solid #393939', padding: '30px 0' }}>
+import { selectTalk } from 'core/actions/talks';
+
+const Talk = ({ talk, selectTalk }) => (
+	<div style={{ display: 'flex', width: '100%', borderTop: '3px solid #393939', padding: '30px 0' }}
+			 onClick={ () => selectTalk(talk) }>
 		<Time>
 			{ talk.time }
 		</Time>
@@ -71,4 +75,4 @@ const Title = styled.div`
   font-size: 25px;
 `;
 
-export default Talk;
+export default connect(null, { selectTalk })(Talk);
