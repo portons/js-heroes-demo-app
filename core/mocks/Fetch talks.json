@@ -38,12 +38,6 @@
               "break": true
             },
             {
-              "time": "08:00am",
-              "name": null,
-              "title": "Registration",
-              "avatar": "http://jsheroes.io/assets/images/thumb/other/registration.png"
-            },
-            {
               "time": "11:00",
               "name": "Xavier Cazalot",
               "title": "How to get started and build something with GraphQL",

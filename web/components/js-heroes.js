@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { fetchTalks } from 'core/actions/talks';
 
-import { talksSelector } from 'core/selectors/talks';
+import { talksSelector, selectedTalkSelector } from 'core/selectors/talks';
 
 import Welcome from 'web/components/welcome';
 import Talks from 'web/components/talks';
@@ -15,7 +15,8 @@ class JsHeroes extends React.Component {
 			<Container>
 				{
 					this.props.talks
-						? <Talks talks={ this.props.talks }/>
+						? <Talks talks={ this.props.talks }
+										 selectedTalk={ this.props.selectedTalk }/>
 						: <Welcome fetchTalks={ this.props.fetchTalks } />
 				}
 			</Container>
@@ -33,7 +34,8 @@ const Container = styled.div`
 `;
 
 const mapStateToProps = (state) => ({
-	talks: talksSelector(state)
+	talks: talksSelector(state),
+	selectedTalk: selectedTalkSelector(state)
 });
 
 export default connect(mapStateToProps, { fetchTalks })(JsHeroes);

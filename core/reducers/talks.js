@@ -1,4 +1,5 @@
 import { handleActions } from 'redux-actions';
+import { isEqual } from 'lodash';
 
 import { SET_TALKS, SELECT_TALK } from '../constants/action-types';
 
@@ -13,10 +14,19 @@ const talksReducer = handleActions({
 		talks: action.payload.data.response
 	}),
 
-	[SELECT_TALK]: (state, action) => ({
-		...state,
-		selectedTalk: action.payload.talk
-	})
+	[SELECT_TALK]: (state, { payload: { talk } }) => {
+		if (isEqual(state.selectedTalk, talk)) {
+			return ({
+				...state,
+				selectedTalk: null
+			});
+		}
+
+		return ({
+			...state,
+			selectedTalk: talk
+		});
+	}
 }, INITIAL_STATE);
 
 export default talksReducer;

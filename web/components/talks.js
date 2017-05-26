@@ -5,7 +5,7 @@ import Talk from 'web/components/talk';
 
 class Talks extends React.Component {
 	render() {
-		const { talks } = this.props;
+		const { talks, selectedTalk } = this.props;
 
 		return (
 			<Container>
@@ -16,6 +16,7 @@ class Talks extends React.Component {
 				{
 					talks.days[0].events.map((talk, index) => (
 						<Talk key={ index }
+									isSelected={ selectedTalk === talk }
 									talk={ talk }/>
 					))
 				}

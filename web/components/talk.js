@@ -1,16 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { selectTalk } from 'core/actions/talks';
 
 class Talk extends React.Component {
 	render() {
-		const { talk, selectTalk } = this.props;
+		const { talk, selectTalk, isSelected } = this.props;
 
 		return (
-			<Container onClick={ () => selectTalk(talk) }>
-				<Time>
+			<Container onClick={ () => selectTalk(talk) }
+								 isSelected={ isSelected }>
+				<Time className="time">
 					{ talk.time }
 				</Time>
 
@@ -21,12 +22,12 @@ class Talk extends React.Component {
 				<Info>
 					{
 						talk.name &&
-						<Name>{ talk.name }</Name>
+						<Name className="name">{ talk.name }</Name>
 					}
 
 					{
 						talk.title &&
-						<Title>{ talk.title }</Title>
+						<Title className="title">{ talk.title }</Title>
 					}
 				</Info>
 			</Container>
@@ -41,16 +42,32 @@ const Container = styled.div`
  padding: 30px 0;
  transition: all 0.5s ease-out;
   	
- &:hover {
- 	padding: 40px 0;
+ ${({ isSelected }) => isSelected && css`
+ 	padding: 40px 20px;
  	transition: all 0.5s ease-out;
+ 	background-color: white;
  	
- 	.avatar {
- 		height: 170px;
-		width: 130px;
-		transition: all 0.5s ease-out;
- 	}
- }
+		.avatar {
+			height: 170px;
+			width: 130px;
+			transition: all 0.5s ease-out;
+		}
+		
+		.time {
+			color: #8e8e8e;
+			transition: all 0.5s ease-out;
+		}
+		
+		.name {
+			font-size: 35px;
+			transition: all 0.5s ease-out;
+		}
+		
+		.title {
+			font-size: 30px;
+			transition: all 0.5s ease-out;
+		}
+ `}
 `;
 
 const Time = styled.div`
@@ -61,12 +78,14 @@ const Time = styled.div`
   width: 200px;
 	display: flex;
 	align-items: center;
+	width: 20%;
 `;
 
 const Avatar = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 20%;
 `;
 
 const StyledImage = styled.img`
@@ -76,19 +95,19 @@ const StyledImage = styled.img`
 `;
 
 const Info = styled.div`
-	flex-grow: 1;
-  flex-basis: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 10px 20px;
+  width: 60%;
 `;
 
 const Name = styled.div`
 	color: #228dcb;
   fill: #228dcb;
   font-size: 30px;
+  text-align: center;
 `;
 
 const Title = styled.div`
@@ -97,6 +116,7 @@ const Title = styled.div`
   font-weight: 300;
   margin: 0 auto;
   font-size: 25px;
+  text-align: center;
 `;
 
 export default connect(null, { selectTalk })(Talk);
