@@ -1,11 +1,8 @@
-import { API_URL } from 'core/constants/config';
 import { SET_TALKS } from 'core/constants/action-types';
 
-export const fetchTalks = () => (dispatch) => {
-	fetch(`${API_URL}/talks.json`).then(response => {
-		response.json().then(data => dispatch(setTalks(data)));
-	});
-};
+import TALKS_MOCK from 'core/mocks/Fetch talks.json';
+
+export const fetchTalks = () => (dispatch) => dispatch(setTalks(TALKS_MOCK));
 
 const setTalks = (data) => ({
   type: SET_TALKS,

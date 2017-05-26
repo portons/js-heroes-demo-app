@@ -1,9 +1,6 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
 
-//import connect from 'mimic/react-native';
-//connect();
-
 import App from 'native-components/app';
 
 const JsHeroes = () => (
