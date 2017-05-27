@@ -1,4 +1,5 @@
 import React from 'react';
+//import { connect } from 'redux';
 import { StatusBar, View, StyleSheet } from 'react-native';
 import Anime from 'react-native-anime';
 
@@ -6,6 +7,17 @@ import Anime from 'react-native-anime';
 //import TalksList from 'native-components/demo/talks-list';
 
 class App extends React.Component {
+	render() {
+		return (
+			<View style={ styles.container }>
+				<Anime.Text style={ styles.title }
+										ref={ ref => this.title = ref }>
+					JS HEROES
+				</Anime.Text>
+			</View>
+		);
+	}
+
 	componentWillMount() {
 		StatusBar.setBarStyle('light-content', true);
 	}
@@ -16,17 +28,6 @@ class App extends React.Component {
 				.color('#228dcb', { duration: 2000 })
 				.start();
 		}
-	}
-
-	render() {
-		return (
-			<View style={ styles.container }>
-				<Anime.Text style={ styles.title }
-										ref={ ref => this.title = ref }>
-					JS HEROES
-				</Anime.Text>
-			</View>
-		);
 	}
 }
 
