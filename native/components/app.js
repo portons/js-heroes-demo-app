@@ -31,7 +31,7 @@ class App extends React.Component {
 
 				{
 					this.props.talks
-						? <TalksList talks={ this.props.talks.days[0].events }
+						? <TalksList talks={ this.props.talks }
 												 selectedTalk={ this.props.selectedTalk }
 												 selectTalk={ this.props.selectTalk }/>
 						: <Button text="FETCH TALKS"

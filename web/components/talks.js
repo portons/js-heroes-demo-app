@@ -14,7 +14,7 @@ class Talks extends React.Component {
 				</Title>
 
 				{
-					talks.days[0].events.map((talk, index) => (
+					talks.map((talk, index) => (
 						<Talk key={ index }
 									isSelected={ selectedTalk === talk }
 									talk={ talk }/>
