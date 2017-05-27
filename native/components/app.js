@@ -1,6 +1,6 @@
 //import { connect } from 'react-redux';
 import React from 'react';
-import { StatusBar, View, StyleSheet } from 'react-native';
+import { StatusBar, Text, View, StyleSheet } from 'react-native';
 import Anime from 'react-native-anime';
 
 //import { talksSelector, selectedTalkSelector } from 'core/selectors/talks';
