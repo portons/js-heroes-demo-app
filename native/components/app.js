@@ -19,7 +19,9 @@ class App extends React.Component {
 		return (
 			<View style={ styles.container }>
 				<Anime.Text style={ styles.title }
-										ref={ ref => this.title = ref }>JS HEROES</Anime.Text>
+										ref={ ref => this.title = ref }>
+					JS HEROES
+				</Anime.Text>
 			</View>
 		);
 	}
