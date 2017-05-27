@@ -5,6 +5,8 @@ import Anime from 'react-native-anime';
 
 //import { talksSelector, selectedTalkSelector } from 'core/selectors/talks';
 
+//import { fetchTalks, selectTalk } from 'core/actions/talks';
+
 //import Button from 'native-components/demo/button';
 //import TalksList from 'native-components/demo/talks-list';
 
