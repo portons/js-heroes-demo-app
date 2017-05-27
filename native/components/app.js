@@ -13,7 +13,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<View style={ styles.container }>
-				<Text style={ styles.title }>HELLO JS HEROES</Text>
+				<Text style={ styles.title }>JS HEROES</Text>
 
 				{
 					this.props.talks

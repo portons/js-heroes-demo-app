@@ -4112,6 +4112,12 @@ react-hot-loader@^1.3.1:
     react-hot-api "^0.4.5"
     source-map "^0.4.4"
 
+react-native-anime@^0.0.47:
+  version "0.0.47"
+  resolved "https://registry.yarnpkg.com/react-native-anime/-/react-native-anime-0.0.47.tgz#022c4307104d7ba2ce5447358693d1d483a9b507"
+  dependencies:
+    lodash "^4.0.0"
+
 react-native@0.42.0:
   version "0.42.0"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.42.0.tgz#59b501603a63232598fff653a36307a26010402e"
