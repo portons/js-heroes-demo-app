@@ -11,7 +11,7 @@ const appPath           = path.join(__dirname);
 const testPath          = path.join(__dirname, 'test');
 const distPath          = path.join(__dirname, 'dist');
 const exclude           = /node_modules/;
-const packageExclude    = ['react-native', 'mimic'];
+const packageExclude    = ['react-native', 'mimic', 'react-native-anime'];
 
 const vendorPackages = _.filter(Object.keys(packageConfig.dependencies), function (dep) {
 	return !_.includes(packageExclude, dep);

@@ -2,6 +2,9 @@ import React from 'react';
 import { StatusBar, View, StyleSheet } from 'react-native';
 import Anime from 'react-native-anime';
 
+//import Button from 'native-components/demo/button';
+//import TalksList from 'native-components/demo/talks-list';
+
 class App extends React.Component {
 	componentWillMount() {
 		StatusBar.setBarStyle('light-content', true);
