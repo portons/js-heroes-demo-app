@@ -1,23 +1,35 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Text, View, StyleSheet } from 'react-native';
+import Anime from 'react-native-anime';
 
-import { talksSelector } from 'core/selectors/talks';
+import { talksSelector, selectedTalkSelector } from 'core/selectors/talks';
 
-import { fetchTalks } from 'core/actions/talks';
+import { fetchTalks, selectTalk } from 'core/actions/talks';
 
 import Button from 'native-components/demo/button';
 import TalksList from 'native-components/demo/talks-list';
 
 class App extends React.Component {
+	componentDidUpdate(prevProps) {
+		if (this.props.talks && !prevProps.talks) {
+			this.title
+				.color('#228dcb', { duration: 2000 })
+				.start();
+		}
+	}
+
 	render() {
 		return (
 			<View style={ styles.container }>
-				<Text style={ styles.title }>JS HEROES</Text>
+				<Anime.Text style={ styles.title }
+										ref={ ref => this.title = ref }>JS HEROES</Anime.Text>
 
 				{
 					this.props.talks
-						? <TalksList talks={ this.props.talks.days[0].events }/>
+						? <TalksList talks={ this.props.talks.days[0].events }
+												 selectedTalk={ this.props.selectedTalk }
+												 selectTalk={ this.props.selectTalk }/>
 						: <Button text="FETCH TALKS"
 											onPress={ this.props.fetchTalks }/>
 				}
@@ -35,14 +47,15 @@ const styles = StyleSheet.create({
 		backgroundColor: '#222'
 	},
 	title: {
-		fontSize: 30,
+		fontSize: 40,
 		color: 'white',
 		marginBottom: 20
 	}
 });
 
 const mapStateToProps = (state) => ({
-	talks: talksSelector(state)
+	talks: talksSelector(state),
+	selectedTalk: selectedTalkSelector(state)
 });
 
-export default connect(mapStateToProps, { fetchTalks })(App);
+export default connect(mapStateToProps, { fetchTalks, selectTalk })(App);
