@@ -1,6 +1,5 @@
 .idea
 dist
 node_modules
-ios
 __tests__
 android
