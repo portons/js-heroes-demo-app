@@ -9,7 +9,7 @@ class Button extends React.Component {
 		const button = heartBeatButton(this.button);
 		const text = disappearingButtonTitle(this.text);
 
-		new Anime.Parallel([button, text]).start(() => this.props.onPress());
+		new Anime.Parallel([button, text]).start(() => this.props.onPress && this.props.onPress());
 	};
 
 	render = () => (
