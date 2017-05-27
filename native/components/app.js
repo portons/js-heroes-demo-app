@@ -1,7 +1,9 @@
-import React from 'react';
 //import { connect } from 'redux';
+import React from 'react';
 import { StatusBar, View, StyleSheet } from 'react-native';
 import Anime from 'react-native-anime';
+
+//import { talksSelector, selectedTalkSelector } from 'core/selectors/talks';
 
 //import Button from 'native-components/demo/button';
 //import TalksList from 'native-components/demo/talks-list';
