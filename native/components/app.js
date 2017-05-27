@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Text, View, StyleSheet } from 'react-native';
+import { StatusBar, View, StyleSheet } from 'react-native';
 import Anime from 'react-native-anime';
 
 import { talksSelector, selectedTalkSelector } from 'core/selectors/talks';
@@ -11,6 +11,10 @@ import Button from 'native-components/demo/button';
 import TalksList from 'native-components/demo/talks-list';
 
 class App extends React.Component {
+	componentWillMount() {
+		StatusBar.setBarStyle('light-content', true);
+	}
+
 	componentDidUpdate(prevProps) {
 		if (this.props.talks && !prevProps.talks) {
 			this.title
