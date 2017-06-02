@@ -8,8 +8,9 @@ import Anime from 'react-native-anime';
 class JsHeroes extends React.Component {
 	render() {
 		return (
-			<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-				<Text>EMPTY</Text>
+			<View style={ styles.container }
+						ref={ ref => this.title = ref }>
+				<Text style={{ fontSize: 30 }}>EMPTY</Text>
 			</View>
 		);
 	}
@@ -28,7 +29,12 @@ class JsHeroes extends React.Component {
 }
 
 const styles = StyleSheet.create({
-	container: {},
+	container: {
+		justifyContent: 'center',
+		alignItems: 'center',
+		flex: 1,
+		paddingTop: 30
+	},
 	title: {
 		fontSize: 40,
 		color: 'white',
