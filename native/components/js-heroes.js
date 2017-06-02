@@ -10,7 +10,7 @@ import Anime from 'react-native-anime';
 //import Button from 'native-components/demo/button';
 //import TalksList from 'native-components/demo/talks-list';
 
-class App extends React.Component {
+class JsHeroes extends React.Component {
 	render() {
 		return (
 			<View style={ styles.container }>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default App;
+export default JsHeroes;

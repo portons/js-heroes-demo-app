@@ -1,10 +1,10 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
 
-import App from 'native-components/app';
+import JsHeroes from 'native-components/js-heroes';
 
-const JsHeroes = () => (
-	<App/>
+const App = () => (
+	<JsHeroes/>
 );
 
-AppRegistry.registerComponent('js-heroes-hybrid-app', () => JsHeroes);
+AppRegistry.registerComponent('js-heroes-hybrid-app', () => App);
