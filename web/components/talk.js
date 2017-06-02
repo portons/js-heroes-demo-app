@@ -1,8 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import styled, { css } from 'styled-components';
-
-import { selectTalk } from 'core/actions/talks';
 
 class Talk extends React.Component {
 	render() {
@@ -119,4 +116,4 @@ const Title = styled.div`
   text-align: center;
 `;
 
-export default connect(null, { selectTalk })(Talk);
+export default Talk;

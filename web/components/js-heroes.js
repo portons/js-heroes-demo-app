@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
-import { fetchTalks } from 'core/actions/talks';
+import { fetchTalks, selectTalk } from 'core/actions/talks';
 
 import { talksSelector, selectedTalkSelector } from 'core/selectors/talks';
 
@@ -13,6 +13,7 @@ class JsHeroes extends React.Component {
 	render() {
 		const { talks,
 						selectedTalk,
+						selectTalk,
 						fetchTalks } = this.props;
 
 		return (
@@ -20,6 +21,7 @@ class JsHeroes extends React.Component {
 				{
 					talks
 						? <Talks talks={ talks }
+										 selectTalk={ selectTalk }
 										 selectedTalk={ selectedTalk }/>
 						: <Welcome fetchTalks={ fetchTalks } />
 				}
@@ -42,4 +44,4 @@ const mapStateToProps = (state) => ({
 	selectedTalk: selectedTalkSelector(state)
 });
 
-export default connect(mapStateToProps, { fetchTalks })(JsHeroes);
+export default connect(mapStateToProps, { fetchTalks, selectTalk })(JsHeroes);

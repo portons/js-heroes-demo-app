@@ -5,7 +5,7 @@ import Talk from 'web/components/talk';
 
 class Talks extends React.Component {
 	render() {
-		const { talks, selectedTalk } = this.props;
+		const { talks, selectedTalk, selectTalk } = this.props;
 
 		return (
 			<Container>
@@ -16,6 +16,7 @@ class Talks extends React.Component {
 				{
 					talks.map((talk, index) => (
 						<Talk key={ index }
+									selectTalk={ selectTalk }
 									isSelected={ selectedTalk === talk }
 									talk={ talk }/>
 					))
