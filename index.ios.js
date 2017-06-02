@@ -7,4 +7,7 @@ const App = () => (
 	<JsHeroes/>
 );
 
-AppRegistry.registerComponent('js-heroes-hybrid-app', () => App);
+AppRegistry.registerComponent(
+	'js-heroes-hybrid-app',
+	() => App
+);
