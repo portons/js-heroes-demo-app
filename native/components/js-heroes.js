@@ -28,13 +28,7 @@ class JsHeroes extends React.Component {
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		paddingTop: 30,
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#222'
-	},
+	container: {},
 	title: {
 		fontSize: 40,
 		color: 'white',
