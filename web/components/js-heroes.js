@@ -9,20 +9,16 @@ import { talksSelector, selectedTalkSelector } from 'core/selectors/talks';
 import Welcome from 'web/components/welcome';
 import Talks from 'web/components/talks';
 
-class JsHeroes extends React.Component {
-	render() {
-		return (
-			<Container>
-				{
-					this.props.talks
-						? <Talks talks={ this.props.talks }
-										 selectedTalk={ this.props.selectedTalk }/>
-						: <Welcome fetchTalks={ this.props.fetchTalks } />
-				}
-			</Container>
-		);
-	}
-}
+const JsHeroes = ({ talks, selectedTalk, fetchTalks }) => (
+	<Container>
+		{
+			talks
+				? <Talks talks={ talks }
+								 selectedTalk={ selectedTalk }/>
+				: <Welcome fetchTalks={ fetchTalks } />
+		}
+	</Container>
+);
 
 const Container = styled.div`
 	font-family: Roboto, sans-serif;
