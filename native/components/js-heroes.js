@@ -2,8 +2,8 @@ import React from 'react';
 import { StatusBar, TouchableOpacity, ScrollView,
 				 Text, View, StyleSheet, Image } from 'react-native';
 
-//import Button from 'native-components/demo/button';
 //import TalksList from 'native-components/demo/talks-list';
+//import Button from 'native-components/demo/button';
 
 class JsHeroes extends React.Component {
 	render() {
