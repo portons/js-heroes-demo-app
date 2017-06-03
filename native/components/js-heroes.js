@@ -14,7 +14,9 @@ class JsHeroes extends React.Component {
 
 		return (
 			<View style={ styles.container }>
-				<Text style={{ fontSize: 30 }}>EMPTY</Text>
+				<Text style={{ fontSize: 30 }}>
+					EMPTY
+				</Text>
 			</View>
 		);
 	}
