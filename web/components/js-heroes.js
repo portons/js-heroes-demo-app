@@ -22,15 +22,13 @@ class JsHeroes extends React.Component {
 						? <TalksList talks={ talks }
 										 		 selectTalk={ selectTalk }
 										 		 selectedTalk={ selectedTalk }/>
-						: <div style={{ position: 'absolute', top: '40vh' }}>
-								<Title>
-									HELLO JS HEROES!
-								</Title>
+						: <Wrapper>
+								<img src={ require('core/assets/images/logo.png') }/>
 
 								<Button onClick={ fetchTalks }>
 									FETCH TALKS
 								</Button>
-							</div>
+							</Wrapper>
 				}
 			</Container>
 		);
@@ -46,18 +44,19 @@ const Container = styled.div`
 	flex-direction: column;
 `;
 
-const Title = styled.div`
-	font-size: 50px;
-	font-weight: 700;
-	color: white;
+const Wrapper = styled.div`
+	position: absolute;
+	top: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Button = styled.div`
 	margin-top: 50px;
 	border: 1px solid #eee;
 	border-radius: 6px;
-	width: 200px;
-	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -65,12 +64,13 @@ const Button = styled.div`
 	font-size: 23px;
 	transition: all 0.5s ease-in;
 	color: white;
+	padding: 30px 50px;
 	
 	&:hover {
-		font-size: 25px;
 		border-width: 5px;
-		width: 200px;
-		height: 100px;
+		padding: 40px 60px;	
+		background-color: white;
+		color: #222;
 		transition: all 0.2s linear;
 	}
 `;
