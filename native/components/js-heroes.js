@@ -1,5 +1,6 @@
 import React from 'react';
-import { StatusBar, TouchableOpacity, ScrollView, View, StyleSheet } from 'react-native';
+import { StatusBar, TouchableOpacity, ScrollView,
+				 Text, View, StyleSheet } from 'react-native';
 
 //import Button from 'native-components/demo/button';
 //import TalksList from 'native-components/demo/talks-list';
@@ -18,9 +19,9 @@ class JsHeroes extends React.Component {
 		);
 	}
 
-	//componentWillMount() {
-	//	StatusBar.setBarStyle('light-content', true);
-	//}
+	componentWillMount() {
+		StatusBar.setBarStyle('light-content', true);
+	}
 }
 
 const styles = StyleSheet.create({
