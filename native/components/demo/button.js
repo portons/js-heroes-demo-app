@@ -27,6 +27,7 @@ class Button extends React.Component {
 
 const styles = StyleSheet.create({
 	container: {
+		marginTop: 20,
 		padding: 20,
 		borderWidth: 2,
 		borderRadius: 6,
