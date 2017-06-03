@@ -10,7 +10,7 @@ class JsHeroes extends React.Component {
 		const { talks,
 						fetchTalks,
 						selectTalk,
-						selectedTalks } = this.props;
+						selectedTalk } = this.props;
 
 		return (
 			<View style={ styles.container }>
