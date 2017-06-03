@@ -9,9 +9,7 @@ class TalksList extends React.Component {
 
 		return (
 			<Container>
-				<Title>
-					TODAY'S TALKS
-				</Title>
+				<Logo src={ require('core/assets/images/logo.png') }/>
 
 				{
 					talks.map((talk, index) => (
@@ -29,7 +27,13 @@ class TalksList extends React.Component {
 const Container = styled.div`
 	overflow: auto;
 	display: flex;
-	flexDirection: column;
+	flex-direction: column;
+	align-items: center;
+`;
+
+const Logo = styled.img`
+	margin: 20px 0;
+	width: 200px;
 `;
 
 const Title = styled.div`
