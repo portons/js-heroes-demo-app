@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar, TouchableOpacity, ScrollView,
-				 Text, View, StyleSheet } from 'react-native';
+				 Text, View, StyleSheet, Image } from 'react-native';
 
 //import Button from 'native-components/demo/button';
 //import TalksList from 'native-components/demo/talks-list';
