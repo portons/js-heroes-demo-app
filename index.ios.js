@@ -1,10 +1,10 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
 
-import JsHeroes from 'native-components/js-heroes';
+import JsHeroesMobile from 'native-components/js-heroes';
 
 const App = () => (
-	<JsHeroes/>
+	<JsHeroesMobile />
 );
 
 AppRegistry.registerComponent(
