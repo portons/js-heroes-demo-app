@@ -1,11 +1,16 @@
 import React from 'react';
-import { StatusBar, Text, View, StyleSheet } from 'react-native';
+import { StatusBar, TouchableOpacity, ScrollView, View, StyleSheet } from 'react-native';
 
 //import Button from 'native-components/demo/button';
 //import TalksList from 'native-components/demo/talks-list';
 
 class JsHeroes extends React.Component {
 	render() {
+		const { talks,
+						fetchTalks,
+						selectTalk,
+						selectedTalks } = this.props;
+
 		return (
 			<View style={ styles.container }>
 				<Text style={{ fontSize: 30 }}>EMPTY</Text>
