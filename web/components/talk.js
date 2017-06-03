@@ -76,6 +76,7 @@ const Time = styled.div`
 	display: flex;
 	align-items: center;
 	width: 20%;
+	padding-left: 10px;
 `;
 
 const Avatar = styled.div`
