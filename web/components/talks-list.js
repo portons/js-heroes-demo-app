@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Talk from 'web/components/talk';
 
-class Talks extends React.Component {
+class TalksList extends React.Component {
 	render() {
 		const { talks, selectedTalk, selectTalk } = this.props;
 
@@ -42,4 +42,4 @@ const Title = styled.div`
 	margin-bottom: 20px;
 `;
 
-export default Talks;
+export default TalksList;
