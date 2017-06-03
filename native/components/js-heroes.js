@@ -1,6 +1,5 @@
 import React from 'react';
 import { StatusBar, Text, View, StyleSheet } from 'react-native';
-import Anime from 'react-native-anime';
 
 //import Button from 'native-components/demo/button';
 //import TalksList from 'native-components/demo/talks-list';
@@ -8,8 +7,7 @@ import Anime from 'react-native-anime';
 class JsHeroes extends React.Component {
 	render() {
 		return (
-			<View style={ styles.container }
-						ref={ ref => this.title = ref }>
+			<View style={ styles.container }>
 				<Text style={{ fontSize: 30 }}>EMPTY</Text>
 			</View>
 		);
@@ -17,14 +15,6 @@ class JsHeroes extends React.Component {
 
 	//componentWillMount() {
 	//	StatusBar.setBarStyle('light-content', true);
-	//}
-	//
-	//componentDidUpdate(prevProps) {
-	//	if (this.props.talks && !prevProps.talks) {
-	//		this.title
-	//			.color('#228dcb', { duration: 2000 })
-	//			.start();
-	//	}
 	//}
 }
 
