@@ -7,11 +7,6 @@ import { StatusBar, TouchableOpacity, ScrollView,
 
 class JsHeroes extends React.Component {
 	render() {
-		const { talks,
-						fetchTalks,
-						selectTalk,
-						selectedTalk } = this.props;
-
 		return (
 			<View style={ styles.container }>
 				<Text style={{ fontSize: 30 }}>
